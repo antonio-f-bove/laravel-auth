@@ -25,8 +25,6 @@ Route::prefix('admin')
     ->namespace('Admin')
     ->middleware('auth')
     ->group(function() {
-    
         Route::get('/home', 'HomeController')->name('home');
-
-        Route::resource('/posts', 'PostController');
+        Route::resource('/posts', 'PostController')->except('show');
     });

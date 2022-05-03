@@ -34,9 +34,14 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         @if (Auth::check())
-                            <li>
+                            <li class="nav-item">
                                 <a href="{{ route('admin.posts.index') }}">
-                                    Posts
+                                    Show Posts
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.posts.create') }}">
+                                    Add new Post
                                 </a>
                             </li>
                         @endif
